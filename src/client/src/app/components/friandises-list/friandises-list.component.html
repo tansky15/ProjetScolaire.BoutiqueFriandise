@@ -1,0 +1,30 @@
+<div class="container">
+
+    <h1>Listes des croustilles</h1>
+
+    <div class="row mt-5">
+
+      <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let friandise of friandises">
+
+        <div class="card mb-5" style="width:18rem;">
+
+          <h5 class="card-title">brand:{{friandise.brand}}</h5>
+
+          <p class="card-text">price: {{friandise.price}}</p>
+
+          <p class="card-text">cie: {{friandise.compagnie}}</p>
+
+          <p class="card-text d-none" >id: {{friandise._id}}</p>
+          <a class="badge bg-warning" routerLink="/friandises/{{friandise._id}}">
+            Editer
+          </a>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>

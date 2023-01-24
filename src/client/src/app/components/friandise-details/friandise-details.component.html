@@ -1,0 +1,36 @@
+<form ngNativeValidate (ngSubmit)="updateFriandise()">
+  <div>
+    <div class="submit-form">
+      <div class="form-group">
+        <label class="h3" for="brand">Saveur</label>
+        <input type="text"
+        class="form-control"
+        id="brand"
+        required
+        [(ngModel)]="currentFriandise.brand"
+        name="brand" />
+      </div>
+
+      <div class="form-group">
+        <label class="h3" for="description">Compagnie</label>
+        <input
+         class="form-control"
+          id="compagnie"
+          required value="{{currentFriandise.compagnie}}"
+          [(ngModel)]="currentFriandise.compagnie"
+           name="compagnie" />
+      </div>
+      <div class="form-group">
+        <label class="h3" for="price">Prix</label>
+        <input class="form-control"
+          id="price"
+          required
+          [(ngModel)]="currentFriandise.price"
+          name="price" />
+      </div>
+      <button type="submit" class="badge bg-warning mr-2">Mise a Jour</button>
+      <button type="button" (click)="deleteFriandise(currentFriandise._id)"  class="badge bg-danger mr-2">Supprimer</button>
+       <button type="button" class="badge bg-success mr-2" (click)="cancelFriandise()">Annuler</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,34 @@
+<form (ngSubmit)="saveFriandise()" ngNativeValidate>
+  <div>
+    <div class="submit-form">
+      <div class="form-group">
+        <label class="h3" for="brand">Saveur</label>
+        <input type="text"
+        class="form-control"
+        id="brand"
+        required
+        [(ngModel)]="friandise.brand"
+        name="brand" />
+      </div>
+
+      <div class="form-group">
+        <label class="h3" for="description">Compagnie</label>
+        <input
+         class="form-control"
+          id="compagnie"
+          required
+          [(ngModel)]="friandise.compagnie"
+           name="compagnie" />
+      </div>
+      <div class="form-group">
+        <label class="h3" for="price">Prix</label>
+        <input class="form-control"
+          id="price"
+          required
+          [(ngModel)]="friandise.price"
+          name="price" />
+      </div>
+      <button type="submit" class="btn btn-success">Envoyer</button>
+    </div>
+  </div>
+</form>
